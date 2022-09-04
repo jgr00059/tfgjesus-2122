@@ -1,0 +1,13 @@
+{
+    "name": "jgr00059/tfgjesus2122",
+    "description": "Prueba de test sobre la aplicación",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jesús García Rodríguez"
+        }
+    ],
+    "scripts": {
+        "test-jesus": ["@php test.php"]
+    }
+}
