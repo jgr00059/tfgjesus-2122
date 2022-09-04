@@ -9,9 +9,9 @@
         $insercion="INSERT INTO usuarios (nombre, apellidos, email, clave) VALUES ('$nombreusuario', '$apellidosusuario', '$emailusuario', '$claveusuario')";
         $insertausuario=$conexionbbdd->prepare($insercion);
 
-        header('Location: ./index.php');
-    } else {
-        header('Location: ./register.php');
+        if($insertausuario->execute()) {
+            header('Location: ./index.php');
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,8 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <p>Página de registro</p>
+    <h1>Registro</h1>
+
     <form action="register.php" method="POST" id="formularioregistro">
         <input type="text" name="nombreusuario" id="nombreusuario" placeholder="Nombre">
         <input type="text" name="apellidosusuario" id="apellidosusuario" placeholder="Apellidos">

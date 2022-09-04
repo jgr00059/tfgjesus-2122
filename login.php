@@ -17,8 +17,6 @@
         } else {
             header('Location: ./login.php');
         }
-    } else {
-        header('Location: ./login.php');
     }
 ?>
 <!DOCTYPE html>
@@ -27,6 +25,7 @@
     <meta charset="utf-8">
 </head>
 <body>
+    <h1>Login</h1>
     <form action="login.php" method="POST" id="formulariologin">
         <input type="email" name="emailusuario" id="emailusuario" placeholder="Email">
         <input type="password" name="claveusuario" id="claveusuario" placeholder="Contraseña">
@@ -35,6 +34,5 @@
             <input type="button" value="Cancelar">
         </a>
     </form>
-    <p>Página de login</p>
 </body>
 </html>
