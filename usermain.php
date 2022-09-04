@@ -19,6 +19,9 @@
     <a href="logout.php">
         <input type="button" value="Cerrar sesion">
     </a>
+    <a href="eliminarusuario.php?id=<?php echo $id;?>">
+        <input type="button" value="Eliminar usuario">
+    </a>
     <table>
         <tr>
             <td><b>TITULO</b></td>
