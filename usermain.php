@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <p>Página personal del usuario <?php echo $nombre ?></p>
+    <h1>Página personal del usuario <?php echo $nombre ?></h1>
     <a href="nuevatarea.php">
         <input type="button" value="Nueva tarea">
     </a>
@@ -20,10 +20,10 @@
     </a>
     <table>
         <tr>
-            <td>Titulo</td>
-            <td>Descripcion</td>
-            <td>Fecha de inicio</td>
-            <td>Fecha de fin</td>
+            <td><b>TITULO</b></td>
+            <td><b>DESCRIPCION</b></td>
+            <td><b>FECHA DE INICIO</b></td>
+            <td><b>FECHA DE FIN</b></td>
         </tr>
         <?php
             $consultatareas=$conexionbbdd->prepare("SELECT * FROM tareas ORDER BY fechainicio");
@@ -34,7 +34,7 @@
                 if($resultadotarea['email']==$id) {
         ?>
                     <tr>
-                        <td><?php echo $resultadotarea['titulo'] ?></td>
+                        <td><?php echo $resultadotarea['titulo'] ?></a></td>
                         <td><?php echo $resultadotarea['descripcion'] ?></td>
                         <td><?php echo $resultadotarea['fechainicio'] ?></td>
                         <td><?php echo $resultadotarea['fechafin'] ?></td>

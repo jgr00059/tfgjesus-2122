@@ -12,9 +12,9 @@
         $insercion="INSERT INTO tareas (titulo, descripcion, email, fechainicio, fechafin) VALUES ('$titulo', '$descripcion', '$email', '$fechainicio', '$fechafin')";
         $insertatarea=$conexionbbdd->prepare($insercion);
 
-        header('Location: ./usermain.php');
-    } else {
-        header('Location: ./nuevatarea.php');
+        if($insertatarea->execute()) {
+            header('Location: ./usermain.php');
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -23,11 +23,11 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <p>Página de nueva tarea</p>
+    <h1>Nueva tarea</h1>
 
     <form action="nuevatarea.php" method="POST" id="formularionuevatarea">
         <input type="text" name="titulo" id="titulo" placeholder="Titulo">
-        <input type="text" name="descripcion" id="descripion" placeholder="descripcion">
+        <input type="text" name="descripcion" id="descripion" placeholder="Descripcion">
         <input type="datetime-local" name="fechainicio" id="fechainicio" placeholder="Fecha de inicio">
         <input type="datetime-local" name="fechafin" id="fechafin" placeholder="Fecha de fin">
         <input type="submit" value="Enviar">
