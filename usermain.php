@@ -18,9 +18,6 @@
     <a href="logout.php">
         <input type="button" value="Cerrar sesion">
     </a>
-    <a href="eliminarusuario.php?id=<?php echo $id;?>">
-        <input type="button" value="Eliminar usuario">
-    </a>
     <table>
         <tr>
             <td><b>TITULO</b></td>
@@ -37,7 +34,7 @@
                 if($resultadotarea['email']==$id) {
         ?>
                     <tr>
-                        <td><a href="tarea.php?id=<?php echo $resultadotarea['idtarea'];?>"><?php echo $resultadotarea['titulo'] ?></a></td>
+                        <td><?php echo $resultadotarea['titulo'] ?></a></td>
                         <td><?php echo $resultadotarea['descripcion'] ?></td>
                         <td><?php echo $resultadotarea['fechainicio'] ?></td>
                         <td><?php echo $resultadotarea['fechafin'] ?></td>
