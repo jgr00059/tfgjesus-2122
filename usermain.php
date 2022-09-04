@@ -9,6 +9,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <h1>Página personal del usuario <?php echo $nombre ?></h1>
@@ -34,7 +35,7 @@
                 if($resultadotarea['email']==$id) {
         ?>
                     <tr>
-                        <td><?php echo $resultadotarea['titulo'] ?></a></td>
+                        <td><a href="tarea.php?id=<?php echo $resultadotarea['idtarea'];?>"><?php echo $resultadotarea['titulo'] ?></a></td>
                         <td><?php echo $resultadotarea['descripcion'] ?></td>
                         <td><?php echo $resultadotarea['fechainicio'] ?></td>
                         <td><?php echo $resultadotarea['fechafin'] ?></td>

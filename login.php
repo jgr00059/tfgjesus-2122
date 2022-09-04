@@ -23,6 +23,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <h1>Login</h1>
