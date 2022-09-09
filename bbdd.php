@@ -2,7 +2,7 @@
     $servidor='db4free.net';
     $usuariobbdd='jgr00059';
     $clavebbdd='tfgjesus2122';
-    $nombrebbdd='aplicaciontareas2';
+    $nombrebbdd='aplicaciontareas';
 
     $conexionbbdd=mysqli_connect($servidor, $usuariobbdd, $clavebbdd, $nombrebbdd);
     if(!$conexionbbdd) {
