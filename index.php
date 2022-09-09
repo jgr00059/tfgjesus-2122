@@ -15,5 +15,8 @@
     <a href="login.php">
         <input type="button" value="Iniciar Sesión">
     </a>
+    <a href="holamundoprueba.php">
+        <input type="button" value="Hola mundo prueba">
+    </a>
 </body>
 </html>
